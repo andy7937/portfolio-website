@@ -1,50 +1,112 @@
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 100px; /* Adjust the height of the shadow as needed */
+    z-index: 999; /* Ensure the shadow is on top */
+    opacity: 0.5; /* Adjust opacity as needed */
+}
+
+body::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(17, 17, 17, 0));
+}
+
+body::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(17, 17, 17, 0));
+}
+
 body {
-	background-color: black;
+	background-color: #111; /* Slightly lighter than black */
 	color: white;
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	padding: 0;
 	overflow-y: scroll;
-  }
+}
 
+  
   .container {
-	width: 50%;
 	margin: 20px auto;
+  }
+  
+  .card {
 	background-color: #1e1e1e;
-	padding-top: 100px;
-	padding-right: 60px;
-	padding-bottom: 5px; /* No padding on the bottom */
-	padding-left: 60px;
-	border-radius: 20px;
+	border-radius: 15px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	text-align: center; /* Center the content */
-	position: relative; /* Ensure relative positioning for child elements */
+	text-align: center;
+	position: relative; /* Needed for the glossy effect */
+	overflow: hidden; /* Ensure the glossy overlay doesn't overflow */
+	transition: background 0.6s ease-in-out; /* Smooth transition for background change */
   }
-
-  .container h2 {
-	font-size: 1.5em; /* Adjust as needed */
+  
+  /* Glossy effect */
+  .card::before {
+	content: '';
 	position: absolute;
-	top: 5px; /* Adjust as needed */
-	left: 20px; /* Adjust as needed */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0) 50%);
+	border-radius: 15px;
+	opacity: 0.3; /* Adjust the opacity for the level of gloss */
+	pointer-events: none; /* Ensure it doesn't interfere with interactions */
   }
 
-  .container h3 {
-	font-size: 1.5em; /* Adjust as needed */
-	position: absolute;
-	top: 30px; /* Adjust as needed */
-	left: 20px; /* Adjust as needed */
+	/* Hover effect for the card */
+	.card:hover {
+		background: radial-gradient(circle,rgba(0, 0, 255, 0.3)0%, rgba(0, 255, 255, 0.3) 100%);
   }
 
-  .project-header {
-	width: 100%; /* Ensure image takes full width of container */
-	height: auto; /* Maintain aspect ratio */
-	display: block; /* Remove any residual inline styling */
-	border-radius: 20px;
+  .card-title {
+	font-size: 1.5em;
+	text-align: left;
+  }
+  
+  .card-text {
+	text-align: left;
+  }
+  
+  .card-img-bottom {
+	width: 100%;
+	height: auto;
+	border-radius: 15px;
 	cursor: pointer;
+	transition: transform 0.6s ease-in-out; /* Smooth transition for image move */
   }
 
+  /* Hover effect to move the image up */
+.card:hover .card-img-bottom {
+	transform: translateY(-10px); /* Move image up by 10px */
+}
+  
   .project-details {
 	display: none;
 	padding-top: 10px;
 	font-weight: 300;
+  }
+
+  /* Customize the scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+	width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+	background: #1e1e1e; /* Track background color */
+	border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+	background-color: #555; /* Scrollbar thumb color */
+	border-radius: 10px;
+	border: 3px solid #1e1e1e; /* Border color to blend with the track */
+  }
+  
+  /* Optional: Hover effect for the scrollbar thumb */
+  ::-webkit-scrollbar-thumb:hover {
+	background-color: #777; /* Color when hovering */
   }
