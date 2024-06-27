@@ -30,18 +30,37 @@ body {
 
   
   .container {
-	margin: 20px auto;
+	margin: 80px auto;
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically */
+  max-width: 1500px;
   }
+
   
+  .card2 {
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6); /* Larger and more noticeable shadow */
+    text-align: center;
+    position: relative; /* Needed for the glossy effect */
+    overflow: hidden; /* Ensure the glossy overlay doesn't overflow */
+    transition: background 0.6s ease-in-out; /* Smooth transition for background change */
+    position: relative; /* Needed for the shining effect */
+    max-width: 100%; /* Ensures it doesn't exceed the container width */    
+    border: 1px solid rgb(30, 30, 30);
+    }
+  
+
   .card {
 	background-color: #1e1e1e;
 	border-radius: 15px;
-	box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6); /* Larger and more noticeable shadow */
 	text-align: center;
 	position: relative; /* Needed for the glossy effect */
 	overflow: hidden; /* Ensure the glossy overlay doesn't overflow */
 	transition: background 0.6s ease-in-out; /* Smooth transition for background change */
 	position: relative; /* Needed for the shining effect */
+  margin:10px;
+  border: 1px solid rgb(49, 49, 49);
   }
   
   .card::before {
@@ -58,9 +77,27 @@ body {
 }
 
 	/* Hover effect for the card */
-	.card:hover {
+	.container:hover .card{
 		background: radial-gradient(circle,rgb(13, 136, 136), rgba(0, 0, 255, 0.1)150%);
   }
+
+    /* Hover effect to move the image up */
+  .container:hover .card-img-bottom {
+    transform: translateY(-10px); /* Move image up by 10px */
+  }
+
+  .card2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px; /* Adjust the height of the line */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.3; /* Adjust the opacity for the level of gloss */
+    pointer-events: none; /* Ensure it doesn't interfere with interactions */
+}
 
   .card-title {
 	font-size: 1.5em;
@@ -77,14 +114,9 @@ body {
 	border-radius: 15px;
 	cursor: pointer;
 	transition: transform 0.6s ease-in-out; /* Smooth transition for image move */
-
+  border: 1px solid rgb(49, 49, 49);
 
   }
-
-  /* Hover effect to move the image up */
-.card:hover .card-img-bottom {
-	transform: translateY(-10px); /* Move image up by 10px */
-}
   
   .project-details {
 	display: none;
