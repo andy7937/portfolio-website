@@ -5,17 +5,44 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Custom Css -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" type="text/css" />
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 
-    <title>Landing Page</title>
-  <script defer data-domain="plum-reine-37.tiiny.site" src="https://analytics.tiiny.site/js/plausible.js"></script><script type="text/javascript" src="https://tiiny.host/ad-script.js"></script></head>
-
+    <title>Portfolio</title>
+  </head>
   <body>
+    <div class="container">
+      <h2>Project 1</h2>
+      <h3>Test</h3>
+      <img src="images/driving_neuralnetwork.png" class="project-header" onclick="toggleProjectDetails(this)">
+      <div class="project-details">Details about Project 1...</div>
+    </div>
 
- 
+    <div class="container">
+      <h2>Project 1</h2>
+      <img src="images/packet_sniffer.png" class="project-header" onclick="toggleProjectDetails(this)">
+      <div class="project-details">Details about Project 2...</div>
+
+    </div>
+
+    <div class="container">
+      <h2>Project 1</h2>
+        <img src="images/bank_1.png" class="project-header" onclick="toggleProjectDetails(this)">
+        <div class="project-details">Details about Project 3...</div>
+    </div>
+
+    <script>
+      function toggleProjectDetails(header) {
+        const details = header.nextElementSibling;
+        if (details.style.display === 'none' || !details.style.display) {
+          details.style.display = 'block';
+        } else {
+          details.style.display = 'none';
+        }
+      }
+    </script>
   </body>
 </html>
