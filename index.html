@@ -20,49 +20,119 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <div class="container">
-      <div class="card2">
-      <div class="card animate__animated animate__fadeInUp">
-        <div class="card-body">
-          <h5 class="card-title">Driving Neural Network</h5>
-          <p class="card-text">Subtitle for Project 1</p>
-          <img src="images/driving_neuralnetwork.png" class="card-img-bottom" onclick="toggleProjectDetails(this)">
-          <div class="project-details">Details about Project 1...</div>
-        </div>
+    <div class="main-content">
+      <div class="container">
+          <div class="card2">
+              <div class="card animate__animated animate__fadeInUp">
+                  <div class="card-body">
+                      <h5 class="card-title">Driving Neural Network</h5>
+                      <p class="card-text">Simulating the Future of Autonomous Driving for Virtual Test Environments</p>
+                      <img src="images/driving_neuralnetwork.png" class="card-img-bottom" onclick="showModal(this)">
+                      <div class="project-details">
+                        <h2>Overview</h2>
+                        <video autoplay loop muted playsinline>
+                            <source src="images/carsim.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
-    </div>
+  
+      <div class="container">
+          <div class="card2">
+              <div class="card animate__animated animate__fadeInUp">
+                  <div class="card-body">
+                      <h5 class="card-title">Network Analyser</h5>
+                      <p class="card-text">Advanced Packet Analysis: Monitoring, Logging, and Detecting Malicious Network Activity</p>
+                      <img src="images/packet_sniffer.png" class="card-img-bottom" onclick="showModal(this)">
+                      <div class="project-details">
+                        <h2>Overview</h2>
+                        <video autoplay loop muted playsinline>
+                            <source src="images/packet.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <div class="container">
+          <div class="card2">
+              <div class="card animate__animated animate__fadeInUp">
+                  <div class="card-body">
+                      <h5 class="card-title">Bank Project</h5>
+                      <p class="card-text">Simulated Bank Management: User Registration, Login, and Secure Fund Transfers with MySQL Integration</p>
+                      <img src="images/bank_1.png" class="card-img-bottom" onclick="showModal(this)">
+                      <div class="project-details">
+                        <h2>Overview</h2>
+                        <img src="images/bank_2.png" class="card-img-bottom">
+                        <img src="images/bank_login.png" class="card-img-bottom">
+                        <img src="images/bank_registration.png" class="card-img-bottom">
+                        <img src="images/registration_complete.png" class="card-img-bottom">
+                        <img src="images/registration.png" class="card-img-bottom">
+                        <img src="images/account.png" class="card-img-bottom">
+                        <img src="images/tranfer.png" class="card-img-bottom">
+                        <img src="images/newdb.png" class="card-img-bottom">
+                      </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
 
-    <div class="container">
-      <div class="card2">
-      <div class="card animate__animated animate__fadeInUp">
-        <div class="card-body">
-          <h5 class="card-title">Network Analyser</h5>
-          <p class="card-text">Subtitle for Project 2</p>
-          <img src="images/packet_sniffer.png" class="card-img-bottom" onclick="toggleProjectDetails(this)">
-          <div class="project-details">Details about Project 2...</div>
+      <div class="container">
+        <div class="card2">
+            <div class="card animate__animated animate__fadeInUp">
+                <div class="card-body">
+                    <h5 class="card-title">Alien AI Game</h5>
+                    <p class="card-text"></p>
+                    <img src="images/alien.png" class="card-img-bottom" onclick="showModal(this)">
+                    <div class="project-details">
+                      <h2>Overview</h2>
+
+                      <video autoplay loop muted playsinline>
+                        <source src="images/alien.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
   </div>
-
-    <div class="container">
-      <div class="card2">
-      <div class="card animate__animated animate__fadeInUp">
-        <div class="card-body">
-          <h5 class="card-title">Bank Project</h5>
-          <p class="card-text">Subtitle for Project 3</p>
-          <img src="images/bank_1.png" class="card-img-bottom" onclick="toggleProjectDetails(this)">
-          <div class="project-details">Details about Project 3...</div>
-        </div>
+  
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="hideModal()">&times;</span>
+          <div id="modal-text"></div>
       </div>
-    </div>
   </div>
-
-
-    <script>
-      function toggleProjectDetails(header) {
+  
+  <script>
+      function showModal(image) {
+          const modal = document.getElementById("myModal");
+          const modalText = document.getElementById("modal-text");
+          const projectDetails = image.nextElementSibling.innerHTML;
+  
+          modalText.innerHTML = projectDetails;
+          modal.style.display = "block";
+  
+          document.querySelector('.main-content').classList.add('blur');
       }
-    </script>
+  
+      function hideModal() {
+          const modal = document.getElementById("myModal");
+          modal.style.display = "none";
+  
+          document.querySelector('.main-content').classList.remove('blur');
+      }
+  </script>
   </body>
-</html>
+  </html>
