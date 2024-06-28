@@ -65,7 +65,7 @@ body {
 
   
   .card2 {
-    background-color: #1a1a1a;
+    background-color: #161616;
     border-radius: 30px;
     box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6); /* Larger and more noticeable shadow */
     text-align: center;
@@ -78,38 +78,57 @@ body {
     }
   
 
-  .card {
-	background-color: #1e1e1e;
-	border-radius: 30px;
-	text-align: center;
-	position: relative; /* Needed for the glossy effect */
-	overflow: hidden; /* Ensure the glossy overlay doesn't overflow */
-	transition: background 0.6s ease-in-out; /* Smooth transition for background change */
-	position: relative; /* Needed for the shining effect */
-  margin:10px;
-  border: 1px solid rgb(49, 49, 49);
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(17, 17, 17, 0));
-
-  }
-  
-  .card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 2px; /* Adjust the height of the line */
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
-    opacity: 0.3; /* Adjust the opacity for the level of gloss */
-    pointer-events: none; /* Ensure it doesn't interfere with interactions */
-}
-
-	/* Hover effect for the card */
-	.container:hover .card{
-		background: radial-gradient(circle,rgb(13, 136, 136), rgba(0, 0, 255, 0.05)150%), linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
-  }
-
+    .card {
+      background-color: #222222 !important;
+      border-radius: 30px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      margin: 10px;
+      border: 1px solid rgb(49, 49, 49);
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(17, 17, 17, 0));
+      transition: background 0.4s ease-out; /* Smooth transition for background change */
+    }
+    
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 2px; /* Adjust the height of the gloss line */
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+      opacity: 0.3; /* Adjust the opacity for the gloss effect */
+      pointer-events: none;
+      transition: opacity 0.4s ease-out; /* Smooth transition for opacity change */
+    }
+    
+    .card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center top, rgb(10, 88, 112), rgba(0, 0, 0, 0.4)); /* Adjust the radial gradient here */
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease-out; /* Smooth transition for opacity change */
+      z-index: -1;
+    }
+    
+    .card:hover {
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(17, 17, 17, 0.1)); /* Adjust the hover background gradient */
+    }
+    
+    .card:hover::before {
+      opacity: 0; /* Fade out the linear gradient gloss on hover */
+    }
+    
+    .card:hover::after {
+      opacity: 1; /* Fade in the radial gradient glossy effect on hover */
+    }
     /* Hover effect to move the image up */
   .container:hover .card-img-bottom {
     transform: translateY(-20px); /* Move image up by 10px */
@@ -129,16 +148,25 @@ body {
 }
 
   .card-title {
-	font-size: 1.5em;
-	text-align: left;
+    letter-spacing: 0;
+    margin-top: 50px;
+    margin-left: 50px;
+    text-shadow: 0 -2px 10px rgba(255, 255, 255, .2);
+    justify-content: space-between;
+    font-family: Neue Montreal, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 100%;
+    display: flex;
   }
   
   .card-text {
+    margin-left: 50px;
 	text-align: left;
   }
   
   .card-img-bottom {
-    margin-top:20px;
+    margin-top:100px;
     width: 90%;
     height: auto;
     border-top-left-radius: 30px;
@@ -151,10 +179,24 @@ body {
   }
   
   .project-details {
-	display: none;
-	padding-top: 10px;
-	font-weight: 300;
+    display: none;
+    flex-direction: column;
+    align-items: center; /* Center align children elements horizontally */
+    overflow: hidden; /* Hides overflowing content */
+    padding-top: 10px;
+    font-weight: 300;
   }
+
+  .video {
+    width: 100%;
+  }
+
+  .project-details .project-text {
+    word-wrap: break-word; /* Ensures long words break to fit within the container */
+    white-space: normal; /* Ensures the text wraps normally */
+    margin: 10px 0; /* Adds some margin to separate paragraphs */
+    color: #333; /* Sets text color */
+   }
 
   .modal {
     display: none;
