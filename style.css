@@ -28,6 +28,33 @@ body {
 	overflow-y: scroll;
 }
 
+.header-buttons {
+  position: fixed;
+  top: 40px;
+  right: 60px;
+  z-index: 1000;
+}
+
+.header-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s ease-out;
+  padding: 10px 15px;
+  border-radius: 20px 20px 20px 20px; /* Make top-left and top-right corners curved */
+  display: inline-block;
+}
+
+.header-link:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly more white */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Dim circle shadow */
+  text-decoration: none; /* Remove underline on hover */
+}
+
+.main-content{
+  margin-top: 200px;
+}
   
   .container {
 	margin: 80px auto;
@@ -39,7 +66,7 @@ body {
   
   .card2 {
     background-color: #1a1a1a;
-    border-radius: 15px;
+    border-radius: 30px;
     box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6); /* Larger and more noticeable shadow */
     text-align: center;
     position: relative; /* Needed for the glossy effect */
@@ -53,7 +80,7 @@ body {
 
   .card {
 	background-color: #1e1e1e;
-	border-radius: 15px;
+	border-radius: 30px;
 	text-align: center;
 	position: relative; /* Needed for the glossy effect */
 	overflow: hidden; /* Ensure the glossy overlay doesn't overflow */
@@ -61,6 +88,8 @@ body {
 	position: relative; /* Needed for the shining effect */
   margin:10px;
   border: 1px solid rgb(49, 49, 49);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(17, 17, 17, 0));
+
   }
   
   .card::before {
@@ -112,8 +141,8 @@ body {
     margin-top:20px;
     width: 90%;
     height: auto;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     cursor: pointer;
     transition: transform 0.2s ease-out; /* Smooth transition for image move */
     border: 1px solid rgb(49, 49, 49);
