@@ -205,16 +205,26 @@ body {
     letter-spacing: .4px;
     flex: 1;
     font-family: Neue Montreal, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
     line-height: 150%;
    }
 
    .project-title{
+    font-size:18px;
     background-color: var(--background);
     color: var(--on-background);
     flex-direction: column;
     align-items: center;
+   }
+
+   .project-title-card{
+    letter-spacing: -.1px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, .2), 0 -6px 15px rgba(255, 90, 0, .1), 0 5px 15px rgba(0, 87, 255, .25);
+    font-family: Neue Montreal, sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 125%;
 
    }
 
@@ -231,7 +241,7 @@ body {
 }
 
 .modal-content {
-    background-color: #1e1e1e;
+    background-color: #111111;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
