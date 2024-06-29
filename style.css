@@ -154,7 +154,7 @@ body {
     text-shadow: 0 -2px 10px rgba(255, 255, 255, .2);
     justify-content: space-between;
     font-family: Neue Montreal, sans-serif;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 500;
     line-height: 100%;
     display: flex;
@@ -163,6 +163,14 @@ body {
   .card-text {
     margin-left: 50px;
 	text-align: left;
+  color: rgba(242, 242, 242, .5);
+  letter-spacing: .2px;
+  align-self: stretch;
+  padding-right: 32px;
+  font-family: Neue Montreal, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
   }
   
   .card-img-bottom {
@@ -191,11 +199,23 @@ body {
     width: 100%;
   }
 
-  .project-details .project-text {
-    word-wrap: break-word; /* Ensures long words break to fit within the container */
-    white-space: normal; /* Ensures the text wraps normally */
-    margin: 10px 0; /* Adds some margin to separate paragraphs */
-    color: #333; /* Sets text color */
+
+  .project-text {
+    color: rgba(242, 242, 242, .6);
+    letter-spacing: .4px;
+    flex: 1;
+    font-family: Neue Montreal, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 150%;
+   }
+
+   .project-title{
+    background-color: var(--background);
+    color: var(--on-background);
+    flex-direction: column;
+    align-items: center;
+
    }
 
   .modal {
