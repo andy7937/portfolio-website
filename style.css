@@ -250,6 +250,15 @@ body {
     border-radius: 15px;
 }
 
+.card-img-modal {
+  max-height: 500px;
+  max-width: 900px;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px; /* Center the image and add space below */
+}
+
 .close {
     color: #aaa;
     float: right;
@@ -277,6 +286,8 @@ body {
   height: auto;
   border-radius: 10px;
 }
+
+
 
 
   /* Customize the scrollbar for WebKit browsers (Chrome, Safari, Edge) */
