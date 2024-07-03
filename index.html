@@ -118,21 +118,64 @@
                             <div class="video" id="network-video"></div> <!-- Placeholder for YouTube player -->
                                 <p class="project-title-card">Network Security and Analysis </p>
                                 <br>
-                                <p class="project-title">C++ - NpCap - </p>
+                                <p class="project-title">C++ - NpCap - Winsock - Network Protocols</p>
                                 <br>
                                 <p class="project-title">Github Link - https://github.com/andy7937/packet_sniffer </p>
                                 <br> 
                                 <p class="project-title">Context</p>
                                 <p class="project-text">
-        
+                                This project began through my interest in network security and the desire to learn more about how networks function.
+                                The project was created to simulate a network analyser that could monitor, log, and detect malicious network activity.
+                                The code was written in C++ and used the NpCap library to capture packets from the network. The project was a success
+                                as it was able to capture packets from the network and Log them into a readable text file. Currently the project is 
+                                still under development as only the IPv4 section has been implemented, and detailed packet analysis has not been implemented
+                                yet. Surface level packet analysis such as the source and destination IP, source and destination port, and the protocol
+                                analysis have been completed but further analysis such as payload analysis, packet reconstruction, and packet filtering
+                                have not been implemented yet. Further improvements such as anomoly detection on log files will further improve the 
+                                projects ability to detect malicious network activity.
                                 <br> <br> 
                                 <p class="project-title">Skills and Techniques</p>
                                 <p class="project-text">
-        
+                                One of the most important skills learned during the development of this project was understanding how network packets are 
+                                structured and how to capture and dissect them using the NpCap library. The NpCap library was utilized to capture packets 
+                                from the network and dissect them into their respective headers.
+                                Some key insights included understanding that protocols such as IPv4 and IPv6 have different packet structures, which are
+                                further dissected using transport layer protocols such as TCP and UDP. Although not delving deeply into the different layers 
+                                and structures of packets, the main takeaway was that there are two different models that protocols are referred to by: the 
+                                TCP/IP model and the OSI model. The TCP/IP model was used in this project as it is more widely adopted and practical for network analysis.
+                                <br> <br> 
+                                To elaborate, the TCP/IP model is a four-layer model consisting of the Application layer, Transport layer, Internet layer, and the Network Access layer.
+                                <br> <br> 
+                                The application layer is similar to the application, presentation and session layers of the OSI model. It is responsible for
+                                making network requests or responding to requests. Some common protcols used in this layer included HTTP, SMTP, SSH, FTP and DNS
+                                <br> <br> 
+                                The Transport layer is responsible for delivering data between systems or networks and includes protocols for controlling traffic flow, error checking, 
+                                and ensuring data integrity. Common protocols in this layer include TCP and UDP. 
+                                <br> <br> 
+                                TCP (Transmission Control Protocol) establishes a connection using the
+                                three way handshake process, allowing for reliable data transfer. To go further into detail, TCP protocol first sends a synchronise (SYN) request to a server.
+                                THe server then responds with a SYN/ACK packet to acknowledge the request and establish a connection. The client then sends an ACK packet to confirm the connection.
+                                This makes it ideal for applications that require data to be delivered in the correct order and
+                                without errors. 
+                                <br> <br> 
+                                UDP (User Datagram Protocol) operates as a connectionless protocol and is used for applications that require fast data transfer. It 
+                                does not guarantee data delivery in the correct order or without errors, making it suitable for applications where speed is more critical than reliability.
+                                <br> <br> 
+                                The Internet layer is responsible for routing packets to their destination and includes protocols such as IPv4 and IPv6. It ensures delivery to
+                                the destination host, regardless of the path taken. This layer attaches IP addresses to the data packets to indicate the sender's and receiver's
+                                locations and determines which protocol is responsible for delivering the data packet
+                                <br> <br> 
+                                The Network Access layer is responsible for the physical transmission of data between devices and includes protocols such as Ethernet, Wi-Fi, and Bluetooth. 
+                                It ensures that data is transmitted correctly and efficiently.
                                 <br> <br> 
                                 <p class="project-title">Mistakes and Insights</p>
                                 <p class="project-text">
-        
+                                One of the key mistakes made during the development of this project was not understanding the structure of network packets and how to dissect them
+                                using the NpCap library. This led to a lack of progress in the project as I was unable to capture packets from the network and dissect them into their
+                                respective headers. This was a key insight as it allowed me to understand the importance of understanding the structure of network packets and what each
+                                header represented in the packet. Another insight was knowing what each acronym in network terms stood for such as TCP, UDP, HTTP, DNS, SNMP, ICMP, ARP, 
+                                IPv4, IPv6, SSh, FTP, and many more. Understanding the purpose of each protocol and how they interact with each other was crucial in understanding how
+                                network packets are transmitted and received.
                                 <br> <br> 
                                 <p class="project-title">Future Improvements</p>
                                 <p class="project-text">
