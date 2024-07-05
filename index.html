@@ -637,6 +637,7 @@ function toggleModal() {
 modal.addEventListener('click', function(event) {
   if (event.target === modal) {
     toggleModal();
+    hideModal();
   }
 });
 
@@ -644,6 +645,7 @@ modal.addEventListener('click', function(event) {
 window.addEventListener('keydown', function(event) {
   if (event.key === 'Escape' && modal.style.display === 'block') {
     toggleModal();
+    hideModal();
   }
 });
 
