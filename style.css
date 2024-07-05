@@ -1,312 +1,312 @@
 body::before,
 body::after {
-    content: '';
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 200px; /* Adjust the height of the shadow as needed */
-    z-index: 999; /* Ensure the shadow is on top */
-    opacity: 0.5; /* Adjust opacity as needed */
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 200px; /* Adjust the height of the shadow as needed */
+  z-index: 999; /* Ensure the shadow is on top */
+  opacity: 0.5; /* Adjust opacity as needed */
 }
 
 body::before {
-    top: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(17, 17, 17, 0));
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(17, 17, 17, 0));
 }
 
 body::after {
-    bottom: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(17, 17, 17, 0));
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(17, 17, 17, 0));
 }
 
 body {
-	background-color: #111; /* Slightly lighter than black */
-	color: white;
-	font-family: 'Roboto', sans-serif;
-	margin: 0;
-	padding: 0;
-	overflow-y: scroll;
+background-color: #111; /* Slightly lighter than black */
+color: white;
+font-family: 'Roboto', sans-serif;
+margin: 0;
+padding: 0;
+overflow-y: scroll;
 }
 
 .header-buttons {
-  position: fixed;
-  top: 40px;
-  right: 60px;
-  z-index: 1000;
+position: fixed;
+top: 40px;
+right: 60px;
+z-index: 1000;
 }
 
 .header-link {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.2s ease-out;
-  padding: 10px 15px;
-  border-radius: 20px 20px 20px 20px; /* Make top-left and top-right corners curved */
-  display: inline-block;
+color: white;
+text-decoration: none;
+font-weight: bold;
+transition: background 0.2s ease-out;
+padding: 10px 15px;
+border-radius: 20px 20px 20px 20px; /* Make top-left and top-right corners curved */
+display: inline-block;
 }
 
 .header-link:hover {
-  color: white;
-  background-color: rgba(255, 255, 255, 0.1); /* Slightly more white */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Dim circle shadow */
-  text-decoration: none; /* Remove underline on hover */
+color: white;
+background-color: rgba(255, 255, 255, 0.1); /* Slightly more white */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Dim circle shadow */
+text-decoration: none; /* Remove underline on hover */
 }
 
 .main-content{
-  margin-top: 200px;
+margin-top: 200px;
 }
-  
-  .container {
-	margin: 80px auto;
-  justify-content: center; /* Center horizontally */
-  align-items: center;    /* Center vertically */
-  max-width: 1500px;
+
+.container {
+margin: 80px auto;
+justify-content: center; /* Center horizontally */
+align-items: center;    /* Center vertically */
+max-width: 1500px;
+}
+
+
+.card2 {
+  background-color: #161616;
+  border-radius: 30px;
+  box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6); /* Larger and more noticeable shadow */
+  text-align: center;
+  position: relative; /* Needed for the glossy effect */
+  overflow: hidden; /* Ensure the glossy overlay doesn't overflow */
+  transition: background 0.6s ease-in-out; /* Smooth transition for background change */
+  position: relative; /* Needed for the shining effect */
+  max-width: 100%; /* Ensures it doesn't exceed the container width */    
+  border: 1px solid rgb(30, 30, 30);
   }
 
-  
-  .card2 {
-    background-color: #161616;
+
+  .card {
+    background-color: #222222 !important;
     border-radius: 30px;
-    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6); /* Larger and more noticeable shadow */
     text-align: center;
-    position: relative; /* Needed for the glossy effect */
-    overflow: hidden; /* Ensure the glossy overlay doesn't overflow */
-    transition: background 0.6s ease-in-out; /* Smooth transition for background change */
-    position: relative; /* Needed for the shining effect */
-    max-width: 100%; /* Ensures it doesn't exceed the container width */    
-    border: 1px solid rgb(30, 30, 30);
-    }
-  
-
-    .card {
-      background-color: #222222 !important;
-      border-radius: 30px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      margin: 10px;
-      border: 1px solid rgb(49, 49, 49);
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(17, 17, 17, 0));
-      transition: background 0.4s ease-out; /* Smooth transition for background change */
-    }
-    
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      height: 2px; /* Adjust the height of the gloss line */
-      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
-      opacity: 0.3; /* Adjust the opacity for the gloss effect */
-      pointer-events: none;
-      transition: opacity 0.4s ease-out; /* Smooth transition for opacity change */
-    }
-    
-    .card::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at center top, rgb(10, 88, 112), rgba(0, 0, 0, 0.4)); /* Adjust the radial gradient here */
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.4s ease-out; /* Smooth transition for opacity change */
-      z-index: -1;
-    }
-    
-    .card:hover {
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(17, 17, 17, 0.1)); /* Adjust the hover background gradient */
-    }
-    
-    .card:hover::before {
-      opacity: 0; /* Fade out the linear gradient gloss on hover */
-    }
-    
-    .card:hover::after {
-      opacity: 1; /* Fade in the radial gradient glossy effect on hover */
-    }
-    /* Hover effect to move the image up */
-  .container:hover .card-img-bottom {
-    transform: translateY(-20px); /* Move image up by 10px */
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    border: 1px solid rgb(49, 49, 49);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(17, 17, 17, 0));
+    transition: background 0.4s ease-out; /* Smooth transition for background change */
   }
-
-  .card2::before {
+  
+  .card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: 2px; /* Adjust the height of the line */
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%);
-    opacity: 0.3; /* Adjust the opacity for the level of gloss */
-    pointer-events: none; /* Ensure it doesn't interfere with interactions */
-}
-
-  .card-title {
-    letter-spacing: 0;
-    margin-top: 50px;
-    margin-left: 50px;
-    text-shadow: 0 -2px 10px rgba(255, 255, 255, .2);
-    justify-content: space-between;
-    font-family: Neue Montreal, sans-serif;
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 100%;
-    display: flex;
+    height: 2px; /* Adjust the height of the gloss line */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.3; /* Adjust the opacity for the gloss effect */
+    pointer-events: none;
+    transition: opacity 0.4s ease-out; /* Smooth transition for opacity change */
   }
   
-  .card-text {
-    margin-left: 50px;
-	text-align: left;
-  color: rgba(242, 242, 242, .5);
-  letter-spacing: .2px;
-  align-self: stretch;
-  padding-right: 32px;
-  font-family: Neue Montreal, sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 20px;
-  }
-  
-  .card-img-bottom {
-    margin-top:100px;
-    width: 90%;
-    height: auto;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    cursor: pointer;
-    transition: transform 0.2s ease-out; /* Smooth transition for image move */
-    border: 1px solid rgb(49, 49, 49);
-    margin-bottom:-41px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Larger and more noticeable shadow */
-  }
-  
-  .project-details {
-    display: none;
-    flex-direction: column;
-    align-items: center; /* Center align children elements horizontally */
-    overflow: hidden; /* Hides overflowing content */
-    padding-top: 10px;
-    font-weight: 300;
-  }
-
-  .video {
-    width: 100%;
-  }
-
-
-  .project-text {
-    color: rgba(242, 242, 242, .6);
-    letter-spacing: .4px;
-    flex: 1;
-    font-family: Neue Montreal, sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 150%;
-   }
-
-   .project-title{
-    font-size:18px;
-    background-color: var(--background);
-    color: var(--on-background);
-    flex-direction: column;
-    align-items: center;
-   }
-
-   .project-title-card{
-    letter-spacing: -.1px;
-    text-shadow: 0 0 20px rgba(255, 255, 255, .2), 0 -6px 15px rgba(255, 90, 0, .1), 0 5px 15px rgba(0, 87, 255, .25);
-    font-family: Neue Montreal, sans-serif;
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 125%;
-
-   }
-
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
+  .card::after {
+    content: '';
+    position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: radial-gradient(circle at center top, rgb(10, 88, 112), rgba(0, 0, 0, 0.4)); /* Adjust the radial gradient here */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease-out; /* Smooth transition for opacity change */
+    z-index: -1;
+  }
+  
+  .card:hover {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(17, 17, 17, 0.1)); /* Adjust the hover background gradient */
+  }
+  
+  .card:hover::before {
+    opacity: 0; /* Fade out the linear gradient gloss on hover */
+  }
+  
+  .card:hover::after {
+    opacity: 1; /* Fade in the radial gradient glossy effect on hover */
+  }
+  /* Hover effect to move the image up */
+.container:hover .card-img-bottom {
+  transform: translateY(-20px); /* Move image up by 10px */
+}
+
+.card2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px; /* Adjust the height of the line */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0.3; /* Adjust the opacity for the level of gloss */
+  pointer-events: none; /* Ensure it doesn't interfere with interactions */
+}
+
+.card-title {
+  letter-spacing: 0;
+  margin-top: 50px;
+  margin-left: 50px;
+  text-shadow: 0 -2px 10px rgba(255, 255, 255, .2);
+  justify-content: space-between;
+  font-family: Neue Montreal, sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 100%;
+  display: flex;
+}
+
+.card-text {
+  margin-left: 50px;
+text-align: left;
+color: rgba(242, 242, 242, .5);
+letter-spacing: .2px;
+align-self: stretch;
+padding-right: 32px;
+font-family: Neue Montreal, sans-serif;
+font-size: 18px;
+font-weight: 400;
+line-height: 20px;
+}
+
+.card-img-bottom {
+  margin-top:100px;
+  width: 90%;
+  height: auto;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease-out; /* Smooth transition for image move */
+  border: 1px solid rgb(49, 49, 49);
+  margin-bottom:-41px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Larger and more noticeable shadow */
+}
+
+.project-details {
+  display: none;
+  flex-direction: column;
+  align-items: center; /* Center align children elements horizontally */
+  overflow: hidden; /* Hides overflowing content */
+  padding-top: 10px;
+  font-weight: 300;
+}
+
+.video {
+  width: 100%;
+}
+
+
+.project-text {
+  color: rgba(242, 242, 242, .6);
+  letter-spacing: .4px;
+  flex: 1;
+  font-family: Neue Montreal, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 150%;
+  }
+
+  .project-title{
+  font-size:18px;
+  background-color: var(--background);
+  color: var(--on-background);
+  flex-direction: column;
+  align-items: center;
+  }
+
+  .project-title-card{
+  letter-spacing: -.1px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, .2), 0 -6px 15px rgba(255, 90, 0, .1), 0 5px 15px rgba(0, 87, 255, .25);
+  font-family: Neue Montreal, sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 125%;
+
+  }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
-    background-color: #111111;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    color: white;
-    border-radius: 15px;
+  background-color: #111111;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  color: white;
+  border-radius: 15px;
 }
 
 .card-img-modal {
-  max-height: 500px;
-  max-width: 900px;
-  width: auto;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px; /* Center the image and add space below */
+max-height: 500px;
+max-width: 900px;
+width: auto;
+height: auto;
+display: block;
+margin: 0 auto 20px; /* Center the image and add space below */
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .blur {
-    filter: blur(5px);
+  filter: blur(5px);
 }
 
 .main-content {
-    transition: filter 0.3s ease;
+  transition: filter 0.3s ease;
 }
 
 .modal-content video {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+width: 100%;
+height: auto;
+border-radius: 10px;
 }
 
 
 
 
-  /* Customize the scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+/* Customize the scrollbar for WebKit browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-	width: 12px;
-  }
-  
-  ::-webkit-scrollbar-track {
-	background: #1e1e1e; /* Track background color */
-	border-radius: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-	background-color: #555; /* Scrollbar thumb color */
-	border-radius: 10px;
-	border: 3px solid #1e1e1e; /* Border color to blend with the track */
-  }
-  
-  /* Optional: Hover effect for the scrollbar thumb */
-  ::-webkit-scrollbar-thumb:hover {
-	background-color: #777; /* Color when hovering */
-  }
+width: 12px;
+}
+
+::-webkit-scrollbar-track {
+background: #1e1e1e; /* Track background color */
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #555; /* Scrollbar thumb color */
+border-radius: 10px;
+border: 3px solid #1e1e1e; /* Border color to blend with the track */
+}
+
+/* Optional: Hover effect for the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+background-color: #777; /* Color when hovering */
+}
