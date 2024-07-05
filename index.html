@@ -621,6 +621,32 @@
 </div>
 
 <script>
+    
+// Get the modal
+var modal = document.querySelector('.modal');
+
+// Get the modal content
+var modalContent = document.querySelector('.modal-content');
+
+// Function to toggle modal display
+function toggleModal() {
+  modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+}
+
+// Event listener to close modal when clicking outside of it
+modal.addEventListener('click', function(event) {
+  if (event.target === modal) {
+    toggleModal();
+  }
+});
+
+// Optional: Close modal when pressing Escape key
+window.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape' && modal.style.display === 'block') {
+    toggleModal();
+  }
+});
+
 // Function to show modal with project details
 function showModal(image) {
     const modal = document.getElementById("myModal");
